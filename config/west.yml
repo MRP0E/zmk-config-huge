@@ -1,13 +1,16 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: caksoylar
-      url-base: https://github.com/caksoylar
+      url-base: https://github.com/petejohanson
+    - name: enursha
+      url-base: https://github.com/enursha
   projects:
     - name: zmk
-      remote: caksoylar
-      revision: feat/mouse-keys-3.2
+      remote: zmkfirmware
+      revision: feat/pointers-move-scroll
       import: app/west.yml
+    - name: zmk-pmw3320-driver
+      remote: enursha
+      revision: 3320
   self:
     path: config
