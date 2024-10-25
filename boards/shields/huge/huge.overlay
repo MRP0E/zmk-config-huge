@@ -12,23 +12,25 @@
             <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
             <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
             <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-
             <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
             <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        ;
+            <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
-};
-        
+
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <6>;
         rows = <1>;
-
         map = <
             RC(0,0)  RC(0,1)  RC(0,2)  RC(0,3)  RC(0,4)  RC(0,5)
         >;
     };
+
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+    };
+};
 
 &pinctrl {
     spi0_default: spi0_default {
@@ -69,12 +71,4 @@
         // scroll-layers = <2 3>;
         // automouse-layer = <4>;
     };
-};
-
-/ {
-  trackball_listener {
-    compatible = "zmk,input-listener";
-    device = <&trackball>;
-
-  };
 };
