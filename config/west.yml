@@ -11,6 +11,6 @@ manifest:
       import: app/west.yml
     - name: zmk-pmw3320-driver
       remote: enursha
-      revision: "3320"
+      revision: "main"
   self:
     path: config
