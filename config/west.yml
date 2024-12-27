@@ -3,7 +3,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/petejohanson
     - name: Enursha
-      url-base: https://github.com/Enursha/zmk-pmw3320-driver
+      url-base: https://github.com/Enursha
   projects:
     - name: zmk
       remote: zmkfirmware
