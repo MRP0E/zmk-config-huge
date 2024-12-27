@@ -2,15 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/petejohanson
-    - name: Enursha
-      url-base: https://github.com/Enursha
+    - name: enursha
+      url-base: https://github.com/enursha
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
     - name: zmk-pmw3320-driver
-      remote: Enursha
-      revision: '3320'
+      remote: enursha
+      revision: "3320"
   self:
     path: config
